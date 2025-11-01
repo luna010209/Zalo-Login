@@ -18,20 +18,22 @@ class _ZaloLoginPageState extends State<ZaloLoginPage> {
     try {
       // Step 1: Login with Zalo (app or webview)
       final result = await ZaloFlutter.login();
-      print('🔹 Raw Zalo login result: $result');
       if (result == null) {
         setState(() => _status = 'Login canceled or failed');
         return;
       }
 
-      _accessToken = result['access_token'];
-      _refreshToken = result['refresh_token'];
+      _accessToken = result['data']['accessToken'];
+      _refreshToken = result['data']['refreshToken'];
+
+      print("ACCESS TOKEN: $_accessToken");
 
       // Step 2: Fetch user profile
       if (_accessToken != null) {
         final user = await ZaloFlutter.getUserProfile(accessToken: _accessToken!);
         setState(() {
           _userProfile = Map<String, dynamic>.from(user ?? {});
+          print("USER PROFILE: $_userProfile");
           _status = 'Login successful 🎉';
         });
       }
