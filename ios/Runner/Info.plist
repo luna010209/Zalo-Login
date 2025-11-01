@@ -46,6 +46,7 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 
+    <!-- ZaloFlutter start-->
     <key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -55,12 +56,12 @@
 			<string>zalo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>zalo-[ZaloAppID]</string>
+				<string>zalo-[Zalo-ID]</string>
 			</array>
 		</dict>
 	</array>
 	<key>ZaloAppID</key>
-	<string>[ZaloAppID]</string>
+	<string>[Zalo-ID]</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>zalosdk</string>

@@ -1,4 +1,5 @@
 <resources>
-    <string name="zalo_flutter_app_id">3371120902847735030</string>
-    <string name="zalo_flutter_app_id_protocol">zalo-3371120902847735030</string>
+    <string name="app_name">login_zalo</string>
+    <string name="zalo_flutter_app_id">[Zalo-ID]</string>
+    <string name="zalo_flutter_app_id_protocol">zaloprefix[Zalo-ID]</string>
 </resources>

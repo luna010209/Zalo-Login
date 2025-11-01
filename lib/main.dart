@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_zalo/zalo_login_page.dart';
 import 'package:zalo_flutter/zalo_flutter.dart';
 
 void main() {
@@ -39,11 +40,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Zalo Hash Key',
-      home: Scaffold(
-        body: Center(
-          child: const ZaloHashKeyAndroid(), // 👈 This widget shows your key hash
-        ),
-      ),
+      home: ZaloLoginPage()
     );
   }
 }
